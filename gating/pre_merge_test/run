@@ -88,4 +88,8 @@ else
   #              due to excessively long shebang lines in tox's venv scripts.
   tmp_tox_dir=$(mktemp -d)
   sudo -H --preserve-env tox -e ${RE_JOB_SCENARIO} --workdir ${tmp_tox_dir}
+  ls -al
+  ls -al ..
+  mkdir ${RE_HOOK_ARTIFACT_DIR}
+  touch ${RE_HOOK_ARTIFACT_DIR}/test
 fi
